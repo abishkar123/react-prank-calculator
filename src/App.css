@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+
+body{
+  margin: 0;
+  font-size: 1rem;
+}
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(55, 75, 82, 0.68) 94.63%, rgba(6, 19, 23, 0.1) 100%);
+
+  
+}
+.calculator{
+  background: rgba(219, 204, 204, 0.1);
+  width: 450px;
+  color: white;
+  backdrop-filter: blur(10px);
+
+  
+  gap: 1rem;
+  display:grid;
+  
+  grid-template-areas: 
+  "display display display display" 
+  "ac c perc divide"
+  "btn7 btn8 btn9 btnx"
+  "btn4 btn5 btn6 minus"
+  "btn1 btn2 btn3 plus"
+  "btn0 btn0 dot equals";
+
+
+}
+.calculator div{
+  height: 50px;
+  /* width: 50px; */
+  background: rgb(82, 76, 76);
+  
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+  
+}
+.calculator div.display{
+  grid-area:display;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+
+  font-family: 'Orbitron', sans-serif;
+}
+  
+.btn-ac{
+  grid-area:ac;
+
+}
+.btn-c{
+  grid-area:c;
+
+  
+}
+.btn-perc{
+  grid-area:perc;
+
+}
+.btn-divide{
+  grid-area:divide;
+
+}
+.btn-7{
+  grid-area:btn7;
+
+}
+.btn-8{
+  grid-area:btn8;
+
+}
+.btn-9{
+  grid-area:btn9;
+
+}
+.btn-x{
+  grid-area:btnx;
+
+}
+.btn-4{
+  grid-area:btn4;
+
+}
+.btn-5{
+  grid-area:btn5;
+
+}
+.btn-6{
+  grid-area:btn6;
+
+}
+.btn-minus{
+  grid-area:minus;
+
+}
+.btn-1{
+  grid-area:btn1;
+
+}
+.btn-2{
+  grid-area:btn2;
+
+}
+.btn-3{
+  grid-area:btn3;
+
+}
+.btn-plus{
+  grid-area:plus;
+
+}
+.btn-0{
+  grid-area:btn0;
+
+}
+.btn-dot{
+  grid-area:dot;
+
+}
+.btn-equals{
+  grid-area:equals;
+
+}
+.circle {
+  background: linear-gradient(to right, red, purple);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  position: relative;
+  left: 60px;
+  top: 200px;
+   
+
+}
+.prank{
+  background: red !important;
   color: white;
+  animation:shake 0.5s ease-in;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes shake{
+  0%{
+      transform: translateX(10px);
   }
-  to {
-    transform: rotate(360deg);
+
+  50%{
+      transform: translateX(10px);
   }
-}
+
+ 100%{
+  transform: translateX(10px);
+}}
+
